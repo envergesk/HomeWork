@@ -8,39 +8,39 @@ public class HomeWorkApp {
         compareNumbers();
     }
 
-    private static void printThreeWords(){
+    private static void printThreeWords() {
         System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
     }
 
-    private static void checkSumSign(){
+    private static void checkSumSign() {
         int a = 5;
         int b = -6;
-        if (a + b >= 0){
+        if (a + b >= 0) {
             System.out.println("Сумма положительная");
-        }else{
+        } else {
             System.out.println("Сумма отрицательная");
         }
     }
 
-    private static void checkColor(){
+    private static void checkColor() {
         int value = 55;
-        if (value <= 0){
+        if (value <= 0) {
             System.out.println("Красный");
-        }else if(0 < value && value <= 100){
+        } else if (0 < value && value <= 100) {
             System.out.println("Желтый");
-        }else{
+        } else {
             System.out.println("Зеленый");
         }
     }
 
-    private static void compareNumbers(){
+    private static void compareNumbers() {
         int a = 6;
         int b = 7;
-        if(a >= b){
+        if (a >= b) {
             System.out.printf("a >= b");
-        }else{
+        } else {
             System.out.printf("a < b");
         }
     }
