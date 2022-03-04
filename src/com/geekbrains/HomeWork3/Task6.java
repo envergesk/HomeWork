@@ -14,6 +14,6 @@ public class Task6 {
             }
         }
         System.out.println("Минимальное значение в массиве = " + min);
-        System.out.println("Максимальное значение в массиве = "+ max);
+        System.out.println("Максимальное значение в массиве = " + max);
     }
 }

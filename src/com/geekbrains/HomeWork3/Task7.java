@@ -8,6 +8,7 @@ public class Task7 {
         int[] currentArray = {3, 7, 7, 5, 5, 7, 10, 4, 3, 3};
         System.out.println(arrayBalance(currentArray));
     }
+
     //Для решения задачи предлагаю найти сумму всех элементов массива, и разделить ее пополам.
 //Таким образом мы найдем точку баланса левой и правой части.
     public static int sumOfArray(int[] array) {
@@ -26,7 +27,7 @@ public class Task7 {
         int localPoint = 0;
         for (int i = 0; i < array.length; i++) {
             localPoint += array[i];
-            if (localPoint == balancePoint){
+            if (localPoint == balancePoint) {
                 return true;
             }
         }

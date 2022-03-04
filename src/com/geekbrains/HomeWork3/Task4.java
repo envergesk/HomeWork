@@ -15,7 +15,7 @@ public class Task4 {
                 if (i == j) {
                     array[i][j] = 1;
                 }
-                if (j == (array.length - 1 - i)){
+                if (j == (array.length - 1 - i)) {
                     array[i][j] = 1;
                 }
             }
