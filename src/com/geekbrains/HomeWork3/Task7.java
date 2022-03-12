@@ -5,7 +5,7 @@ package com.geekbrains.HomeWork3;
 // если в массиве есть место, в котором сумма левой и правой части массива равны.
 public class Task7 {
     public static void main(String[] args) {
-        int[] currentArray = {3, 7, 7, 5, 5, 7, 10, 4, 3, 3};
+        int[] currentArray = {1, 1, 1, 1, 3};
         System.out.println(arrayBalance(currentArray));
     }
 
@@ -23,6 +23,9 @@ public class Task7 {
 // равную половине суммы всей длины массива
 
     public static boolean arrayBalance(int[] array) {
+        if (sumOfArray(array) % 2 != 0){
+            return false;
+        }
         int balancePoint = sumOfArray(array) / 2;
         int localPoint = 0;
         for (int i = 0; i < array.length; i++) {
