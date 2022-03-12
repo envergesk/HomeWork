@@ -11,27 +11,51 @@ import java.util.Arrays;
 public class Task8 {
     public static void main(String[] args) {
         int[] arr = {4, 5, 6, 7, 8, 9};
-//        arrayVector(arr, 4);
-        test(arr);
+        int step = -22;
+        test(arr, step);
     }
 
-    public static void test(int[] arr) {
+    public static void test(int[] arr, int step) {
         int initialIndex = 0;
         int currentIndex = 0;
         int currentValue = arr[0];
         int counter = 0;
-        int step = 4;
+        int stepMethod = step % arr.length;
         while (counter < arr.length) {
-            if (currentIndex == initialIndex && counter != 0) {
-                currentIndex++;
-                initialIndex++;
-                currentValue = arr[currentIndex];
+            if (stepMethod < 0){
+                if (currentIndex == initialIndex && counter != 0) {
+                    currentIndex--;
+                    if (currentIndex < 0){
+                        currentIndex = arr.length + currentIndex;
+                    }
+                    initialIndex--;
+                    if (initialIndex < 0){
+                        initialIndex = arr.length + initialIndex;
+                    }
+                    currentValue = arr[currentIndex];
+                }
+                currentIndex = (currentIndex + stepMethod) % arr.length;
+                if (currentIndex < 0){
+                    currentIndex = arr.length + currentIndex;
+                }
+                int currentNumber = arr[currentIndex];
+                arr[currentIndex] = currentValue;
+                currentValue = currentNumber;
+                counter++;
             }
-            currentIndex = (currentIndex + step) % arr.length;
-            int currentNumber = arr[currentIndex];
-            arr[currentIndex] = currentValue;
-            currentValue = currentNumber;
-            counter++;
+            else{
+                if (currentIndex == initialIndex && counter != 0) {
+                    currentIndex++;
+                    initialIndex++;
+                    currentValue = arr[currentIndex];
+                }
+                currentIndex = (currentIndex + stepMethod) % arr.length;
+                int currentNumber = arr[currentIndex];
+                arr[currentIndex] = currentValue;
+                currentValue = currentNumber;
+                counter++;
+            }
+
         }
         System.out.println(Arrays.toString(arr));
     }

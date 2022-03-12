@@ -9,7 +9,8 @@ public class Task6 {
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
-            } else if (array[i] < min) {
+            }
+            if (array[i] < min) {
                 min = array[i];
             }
         }

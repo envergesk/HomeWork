@@ -6,10 +6,10 @@ import java.util.Arrays;
 
 public class Task2 {
     public static void main(String[] args) {
-        int[] array100 = new int[100];
-        for (int i = 0; i < array100.length; i++) {
-            array100[i] = i + 1;
+        int[] array = new int[100];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
         }
-        System.out.println(Arrays.toString(array100));
+        System.out.println(Arrays.toString(array));
     }
 }
